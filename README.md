@@ -28,7 +28,7 @@ Demonstrações financeiras divulgadas pela empresa na [Central de Resultados](h
 
 ![Ciclos da CMAA](grafico_ciclos.png)
 
-![Dívida líquida sobre EBITDA](grafico_divida.png)
+![Dívida líquida sobre EBITDA](grafico_endividamento.png)
 
 ## Como executar
 
