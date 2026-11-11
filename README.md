@@ -1,11 +1,49 @@
-O projeto Análise financeira da CMAA consiste no cálculo de margens e crescimento, de indicadores, do capital de giro e do endividamento da CMAA com base em dados encontrados na Central de Resultados da empresa.
-Fonte: https://www.cmaa.ind.br/investidores/central-de-resultados
+# Análise financeira da CMAA
 
-O projeto utiliza a unidade em R$ mil, e os anos safra de 22/23 à 25/26.
+Projeto em Python que calcula margens, crescimento, capital de giro e endividamento da CMAA (Companhia Mineira de Açúcar e Álcool Participações) nos anos-safra 22/23 a 25/26.
 
-*O lucro bruto já  inclui variação de valor justo.
-*NCG usa o ano base de 360 dias.
+## Fonte dos dados
 
-Conclusões: margem líquida de 3,6% para -6,4%, resultado financeiro de -327 mil para -500 mil e dívida líquida / EBITDA de 2,3x para 3,5x.
+Demonstrações financeiras divulgadas pela empresa na [Central de Resultados](https://www.cmaa.ind.br/investidores/central-de-resultados), organizadas em planilha pelo grupo e convertidas em `dre.csv` e `bp.csv`.
 
-Utilizei pandas e matplotlib, códigos escritos em python.
+## Observações
+
+- Valores em R$ mil. Períodos em anos-safra.
+- O lucro bruto já inclui a variação do valor justo.
+- O EBITDA é o EBIT mais a depreciação.
+- A NCG soma clientes, ativo biológico, estoques e impostos a recuperar, e subtrai fornecedores e adiantamentos de clientes. Os prazos médios e os ciclos usam base de 360 dias.
+- A dívida bruta soma empréstimos e financiamentos e arrendamentos e parcerias agrícolas a pagar, no circulante e no não circulante.
+
+## Conclusões
+
+- A margem líquida cai de 3,6% (22/23) para -6,4% (25/26).
+- A receita líquida cai 11,9% em 25/26.
+- O resultado financeiro passa de -R$ 327 milhões para -R$ 500 milhões.
+- A dívida líquida sobre o EBITDA sobe de 2,3x para 3,5x.
+- O ciclo financeiro cai de 75,9 para 29,0 dias até 24/25 e volta a 54,4 dias em 25/26.
+
+## Gráficos
+
+![Margens da CMAA](grafico_margens.png)
+
+![Ciclos da CMAA](grafico_ciclos.png)
+
+![Dívida líquida sobre EBITDA](grafico_divida.png)
+
+## Como executar
+
+1. Instale as bibliotecas: `pip install -r requirements.txt`
+2. Abra `analise.ipynb` e execute as células em ordem.
+3. Os resultados são salvos em `resultado_cmaa.xlsx`.
+
+## Tecnologias
+
+Python, pandas e matplotlib.
+
+## Observação final
+
+Projeto de estudo, sem recomendação de investimento.
+
+## Autor
+
+Pedro Rocha Souza | [LinkedIn](https://www.linkedin.com/in/pedro-rsouza/) | [GitHub](https://github.com/Peuzz1)
